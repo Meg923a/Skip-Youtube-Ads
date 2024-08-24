@@ -42,7 +42,8 @@
             ytd-statement-banner-renderer,
             ytd-ad-slot-renderer,
             ytd-in-feed-ad-layout-renderer,
-            ytd-banner-promo-renderer-background
+            ytd-banner-promo-renderer-background,
+            ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],
             statement-banner-style-type-compact,
             .ytd-video-masthead-ad-v3-renderer,
             div#root.style-scope.ytd-display-ad-renderer.yt-simple-endpoint,
