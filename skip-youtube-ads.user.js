@@ -13,11 +13,12 @@
     const observer = new MutationObserver((mutations) => {
         var btn = document.querySelector(".ytp-skip-ad-button");
         if (btn) btn.click();
+        
         var btn2 = document.querySelector(".ytp-preview-ad__text");
         var btn3 = document.querySelector(".ytp-ad-textt");
         if ((btn2 || btn3) && !ii) {
             let video = document.querySelector("video");
-            if (video) video.currentTime = 50;
+            if (video) video.currentTime = 600;
             ii = true;
             setTimeout(function () {
                 ii = false;
