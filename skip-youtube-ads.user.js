@@ -1,33 +1,45 @@
 // ==UserScript==
 // @name         Skip Youtube Ads
-// @namespace    https://github.com/Sp0kzz
-// @version      2024-06-15
-// @description  Skip Youtube Ads Manually
-// @author       Sp0kzz
+// @namespace    https://github.com/Meg923a
+// @version      2025-01-26
+// @description  A simple script to skip Youtube ads
+// @author       Meg923a
 // @match        *://*.youtube.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // ==/UserScript==
 
 (function () {
-    let ii = false;
+    var fastForwarding = false;
+
     const observer = new MutationObserver((mutations) => {
-        var btn = document.querySelector(".ytp-skip-ad-button");
-        if (btn) btn.click();
+        const adText1 = document.querySelector(".ytp-preview-ad__text");
+        const adText2 = document.querySelector(".ytp-ad-textt");
+        const adText3 = document.querySelector(".ytp-ad-button-vm__text");
+        const adText4 = document.querySelector(".ad-simple-attributed-string");
         
-        var btn2 = document.querySelector(".ytp-preview-ad__text");
-        var btn3 = document.querySelector(".ytp-ad-textt");
-        if ((btn2 || btn3) && !ii) {
-            let video = document.querySelector("video");
-            if (video) video.currentTime = 600;
-            ii = true;
+        if ((adText1 || adText2 || adText3 || adText4) && !fastForwarding) {
+            var video = document.querySelector("video");
+            if (video) { video.currentTime = 600; }
+            
+            fastForwarding = true;
             setTimeout(function () {
-                ii = false;
+                fastForwarding = false;
             }, 100);
         }
+
+        var skipButtons = document.querySelectorAll(
+            ".ytp-skip-ad-button",
+            ".ytp-ad-skip-button-modern"
+        );
+
+        skipButtons.forEach(button => {
+            if (button) { btn.click(); }
+        });
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
-    removePageAds();
+    function removeVideoAds() {
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
 
     function removePageAds() {
         const style = document.createElement("style");
@@ -63,4 +75,8 @@
 
         document.head.appendChild(style);
     }
+
+    removeVideoAds()
+    removePageAds();
+
 })();

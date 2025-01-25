@@ -7,4 +7,4 @@ A simple script to skip Youtube ads.
 - install [this script](https://raw.githubusercontent.com/Meg923a/Skip-Youtube-Ads/main/skip-youtube-ads.user.js)
 
 ### Credits:
-This repository is created for maintaining the script by [Spokzz](https://github.com/Sp0kzz) from [here](https://github.com/TheRealJoelmatic/RemoveAdblockThing/issues/602).
+This script is originally from [Spokzz](https://github.com/Sp0kzz) [here](https://github.com/TheRealJoelmatic/RemoveAdblockThing/issues/602).
