@@ -58,6 +58,7 @@
             ytd-banner-promo-renderer-background,
             ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],
             statement-banner-style-type-compact,
+            .ytd-two-column-browse-results-renderer > #masthead-ad
             .ytd-video-masthead-ad-v3-renderer,
             div#root.style-scope.ytd-display-ad-renderer.yt-simple-endpoint,
             div#sparkles-container.style-scope.ytd-promoted-sparkles-web-renderer,
