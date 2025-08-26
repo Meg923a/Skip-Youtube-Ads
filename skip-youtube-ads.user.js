@@ -19,7 +19,7 @@
         
         if ((adText1 || adText2 || adText3 || adText4) && !fastForwarding) {
             var video = document.querySelector("video");
-            if (video) { video.currentTime = 600; }
+            if (video) { video.currentTime = video.duration; }
             
             fastForwarding = true;
             setTimeout(function () {
